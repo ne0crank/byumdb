@@ -9,7 +9,7 @@ This is my coding challenge for entry onto the BYU - Provo development team.
 ```
 > cd webservice
 webservice > npm i
-webservice > npm run
+webservice > npm run start
 ```
 
 # Installing and Starting the Frontend Server
@@ -17,32 +17,34 @@ webservice > npm run
 ```
 > cd webapp
 webapp > npm i
-webapp > npm run
+webapp > npm run serve
 ```
 
 # Challenge tasks
 
 ## Backend
 
-- [ ] build Node.js backend service to frame API
-- [ ] build Express API to receive and forward queries to TMDB
-- [ ] build Express API to receive and respond to frontend queries
-- [ ]
-- [ ] debug as necessary
+- [x] build Node.js backend service to frame API
+- [x] build backend Express API to connect with TMDB
+- [x] build sample array element with TMDB entry to test with
 
 ## Frontend server
 
-- [ ] build basic page with Vue.js, HTML
-- [ ] build queries for backend API and receive data
-- [ ] build out front page with query results
-- [ ] debug as necessary
+- [x] build basic page with Vue.js
+
 
 ## Next tasks
 
+- [ ] build frontend queries for backend API and receive data
+- [ ] build out front page with text box and to display query results
+- [ ] fix up Vue.js code to v3 for consistency
+- [ ] build backend Express API to receive and forward queries to TMDB
+- [ ] build backend Express API to receive and respond to frontend queries
+- [ ] limit backend responses to 10 array elements
+- [ ] limit fields returned from TMDB API on backend
+- [ ] debug outlying cases
 - [ ] Include this repo on my [Portfolio Site](https://ne0crank.github.io/kentmschaeffer/)
-- [ ] upgrade TMDB API to version 4 with list options
 - [ ] add array or DB backend to store history of searches
-- [ ] this is an incomplete item
 
 
 #License

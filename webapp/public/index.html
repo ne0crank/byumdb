@@ -1,23 +1,51 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="web-app">
-      <h4>{{ results.title }}</h4>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BYU Movie Database Challenge</title>
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
+  <script src='https://unpkg.com/vue@next'></script>
+</head>
+<body class="container mt-5">
+<!-- App Template Code Here -->
+  <section class="container" id="movie-app">
+    <div v-for="(movie) in results" :key="movie.id" id="movie-list" class="row d-flex mb-3 align-items-center">
+   <div class="col-sm-4">
+   </div>
+   <div class="col">
+     <h3 class="text-primary">{{ movie.title }}</h3>
+     <p class="mb-0">{{ movie.backdrop_path }}</p>
+     <div class="h5 float-right">{{ movie.vote_average }} / {{ vote_count }}</div>
     </div>
-    <script src="../main.js"></script>
-    <script>
-      const MountedApp = app.mount('#web-app')
-    </script>
-    <!-- built files will be auto injected -->
-  </body>
+  </section>
+
+  <script>
+    export default {
+      data() {
+        return {
+          results: [
+            {
+              "backdrop_path": "/qdthf9WrRDSaIkGVQGhhJ9pz1hn.jpg",
+              "id": 9502,
+              "title": "Kung Fu Panda",
+              "vote_average": 7.1,
+              "vote_count": 8180
+            }
+          ]
+        }
+      }
+    }
+  </script>
+  <style>
+    #movie-app {
+      font-family: Avenir, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+      color: #2c3e50;
+      margin-top: 60px;
+    }
+  </style>
+</body>
 </html>

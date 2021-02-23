@@ -1,27 +1,10 @@
 <template>
-  <div id="app">
-    <Movies />
+  <div id="movie-app" v-for="movie in results" :key="movie.id">
+  <h4>Movie Title</h4>
+  <h5>{{movie.title}}</h5>
+  <h4>Movie Image</h4>
+  <p>{{movie.backdrop_path}}</p>
+  <h4>Movie Popularity</h4>
+  <p>{{movie.vote_average}} / {{movie.vote_count}}</p>
   </div>
 </template>
-
-<script>
-import Movies from './components/Movies.vue'
-
-export default {
-  name: 'App',
-  components: {
-    Movies
-  }
-}
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
