@@ -1,9 +1,0 @@
-<template>
-  <div>
-      <h4>Messages</h4>
-      <ul>
-          <li>First</li>
-          <li>Second</li>
-      </ul>
-  </div>
-</template>
